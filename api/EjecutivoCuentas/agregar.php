@@ -13,13 +13,12 @@ $req = json_decode($json);
 
 $resp= new AgregarRespuesta();
 
-$ec= new EjecutivoCuenta;
-$ec->$Id=1;
-$ec->$Descripcion= $req->$DescripcionEjecutivoDeCuenta;
-$ec->$Usuario="anonimo";
+$ec= new EjecutivoCuenta();
+$ec->Id=1;
+$ec->Descripcion=$req->DescripcionEjecutivoDeCuenta;
+$ec->Usuario="anonimo";
 
 $resp->EjecutivoDeCuentas=$ec;
-
 
 
 echo json_encode ($resp);
